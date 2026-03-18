@@ -1,0 +1,140 @@
+{
+  "projectType": "cli-tool",
+  "projectName": "Max",
+  "projectDescription": "A personal AI daemon for developers that runs as a persistent background service, controllable via Telegram or a local terminal UI, powered by the GitHub Copilot SDK.",
+  "theme": "palm",
+  "primaryColor": "#848c8e",
+  "lightColor": "#11161e",
+  "darkColor": "#cfd0d2",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Commands",
+            "pages": [
+              "commands/overview",
+              "commands/start",
+              "commands/tui",
+              "commands/setup",
+              "commands/update"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/overview",
+              "configuration/telegram",
+              "configuration/models",
+              "configuration/environment"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/orchestrator",
+              "concepts/workers",
+              "concepts/memory",
+              "concepts/model-routing"
+            ]
+          },
+          {
+            "group": "Skills",
+            "pages": [
+              "skills/overview",
+              "skills/installing",
+              "skills/creating",
+              "skills/bundled"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/telegram",
+              "integrations/mcp-servers",
+              "integrations/google-services"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/self-edit",
+              "guides/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "HTTP API",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/messages",
+              "api/sessions",
+              "api/models",
+              "api/memory",
+              "api/skills"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Persistent AI orchestrator session powered by GitHub Copilot SDK",
+    "Multi-interface control via Telegram (remote) and TUI terminal client",
+    "Spawns worker Copilot sessions for coding tasks in specific directories",
+    "Long-term memory system (preferences, facts, projects, people, routines)",
+    "Intelligent model routing — auto-selects fast/standard/premium models by task complexity",
+    "Extensible skill system — teach Max new capabilities via SKILL.md documents",
+    "MCP server integration via Copilot CLI's mcp-config.json",
+    "HTTP API on localhost:7777 with SSE streaming for real-time responses",
+    "Session persistence — resumes orchestrator session across daemon restarts",
+    "Automatic reconnection and health checks every 30 seconds"
+  ],
+  "publicApiSurface": [
+    "max start [--self-edit]",
+    "max tui",
+    "max setup",
+    "max update",
+    "max help",
+    "POST /message",
+    "GET /stream (SSE)",
+    "GET /status",
+    "GET /sessions",
+    "GET /model",
+    "POST /model",
+    "GET /auto",
+    "POST /auto",
+    "GET /memory",
+    "GET /skills",
+    "DELETE /skills/:slug",
+    "POST /cancel",
+    "POST /restart",
+    "POST /send-photo",
+    "TUI /model [name]",
+    "TUI /memory",
+    "TUI /skills",
+    "TUI /workers",
+    "TUI /copy",
+    "TUI /status",
+    "TUI /restart",
+    "TUI /cancel",
+    "TUI /clear",
+    "TUI /help",
+    "TUI /quit"
+  ]
+}
